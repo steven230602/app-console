@@ -1,4 +1,3 @@
-const {value} = require('../handle_readln/readline_file');
 const {searchData} = require('../search.handle/searchData');
 
 exports.logGetData = (data) => {

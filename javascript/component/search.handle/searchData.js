@@ -1,6 +1,7 @@
 const {value} = require('../handle_readln/readline_file');
 
 exports.searchData = (data) => {
+    
     let values = value('Type name to search: ');
     list = [];
     data.forEach((element) => {

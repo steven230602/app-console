@@ -1,6 +1,7 @@
 const {value} = require("./readline_file");
 const {getData} = require("../handle.getData/getData")
 const {addData} = require('../addData.handle/adData');
+const {editData} = require('../editData.handle/editData');
 
 exports.command = (content) => {
     switch(value(content)) {
@@ -11,7 +12,7 @@ exports.command = (content) => {
             addData('database.json')
             break;
         case '3':
-            console.log('3');
+            editData('database.json')
             break;
         case '4':
             console.log('4');
