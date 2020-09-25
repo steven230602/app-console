@@ -1,8 +1,8 @@
 const {editName} = require("./editName");
-const {editAge} = require("./editAge")
-const {editAgeName} = require("./editAgeName")
+const {editAge} = require("./editAge");
+const {editAgeName} = require("./editAgeName");
  
-const {value} = require("../handle_readln/readline_file");
+const {value} = require("../common/readline_file");
 
 // Menu cho phần edit
 exports.menu = (id, url) => {
@@ -11,7 +11,7 @@ exports.menu = (id, url) => {
     console.log('* 2. Edit Age   *');
     console.log('* 3. Edit Both  *');
     console.log('*****************');
-    let chooseNumber = value("Choose how to edit (type number): ")
+    let chooseNumber = value("Choose how to edit (type number): ");
     switch(chooseNumber){
         case '1': 
         return editName(id,url);

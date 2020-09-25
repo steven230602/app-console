@@ -1,29 +1,28 @@
-const {dataUpdated} = require("./updateData");
-const {searchData} = require("../searchData/searchData");
 const {writeData} = require("../handle_database/handle_database");
+const {searchData} = require("../searchData/searchData");
+const {removeData} = require("./removeData");
 const {getData} = require("../getData/getData");
 const {value} = require("../common/readline_file");
 
-// Log ra màn hình kết quả tìm kiếm được 
+
 function logData (url) {
     const data = searchData(url); // dữ liệu đã được tìm kiếm
     data.forEach((element, index) => {
         console.log(index + 1);
         console.log(`name: ${element.name}`);
         console.log(`age: ${element.age}`);
-        console.log("\n")
+        console.log("\n");
     })
     return data;
 }
-    
-// Dùng để sửa lại dữ liệu
-exports.editData = (url) => {
+
+// Nhìn tên hàm là biết
+exports.deleteData = (url) => {
     const data = logData(url);
     let chooseDataToEdit = value("Choose number of data need edit: ");
-    let index = parseInt(chooseDataToEdit);
-    
+    let index = parseInt(chooseDataToEdit) - 1;
     if( typeof index === "number"){ // kiểm tra xem index có phải là số không
-        const newData = dataUpdated(data[index-1],url);
+        let newData = removeData(data[index], url); // thực thi code ở file removeData.js
         writeData(url, JSON.stringify(newData)); // save lại vào file
         console.log("Done!");
     }else{ 

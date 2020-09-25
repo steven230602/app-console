@@ -1,15 +1,15 @@
-const {readData} = require("../handle_file/handle_file");
-const {value} = require("../handle_readln/readline_file");
+const {readData} = require("../handle_database/handle_database");
+const {value} = require("../common/readline_file");
 
 // Nhìn tên hàm là biết
-
 exports.editAge = (id, url) => {
     let data = readData(url);
     let newAge = value("New age: ");
-    data.forEach((element) => {
-        if(element.id === id){
-            element["age"] = newAge;
+    for(let i = 0; i <= data.length; i++){ // edit tên
+        if(data[i].id === id){
+            data[i]["age"] = newAge;
+            break;
         }
-    });
+    };
     return data
 }

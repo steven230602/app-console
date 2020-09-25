@@ -1,14 +1,16 @@
-const {readData} = require("../handle_file/handle_file");
-const {value} = require("../handle_readln/readline_file");
+const {readData} = require("../handle_database/handle_database");
+const {value} = require("../common/readline_file");
 
 // Như cái tên hàm
 exports.editName = (id, url) => {
     let data = readData(url);
     let newName = value("New name: ");
-    data.forEach((element) => {
-        if(element.id === id){
-            element["name"] = newName;
+    
+    for(let i = 0; i <= data.length; i++){
+        if(data[i].id === id){
+            data[i]["name"] = newName;
+            break;
         }
-    });
+    };
     return data
 }

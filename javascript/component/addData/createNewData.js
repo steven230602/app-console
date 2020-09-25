@@ -1,12 +1,11 @@
-const {value} = require("../handle_readln/readline_file");
+const {value} = require("../common/readline_file");
 const Data = require("../Schema/object_data");
-const {generate} = require("shortid");
 
-
+// Tạo đối tượng mới
 exports.newData = () => {
     let inputName = value("Name: ");
     let inputAge = value("Age: ");
-    const createData = new Data(inputName, inputAge)
+    const createData = new Data(inputName, inputAge); // tạo dối tượng
     
-    return createData
+    return createData;
 }

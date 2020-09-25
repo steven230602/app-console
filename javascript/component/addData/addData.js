@@ -1,5 +1,6 @@
-const {readData, writeData} = require("../handle_file/handle_file");
-const {newData} = require("./createNewData")
+const {readData, writeData} = require("../handle_database/handle_database");
+const {getData} = require("../getData/getData");
+const {newData} = require("./createNewData");
 // Tạo mới và lưu dữ liệu được nhập từ người dùng
 exports.addData = (url) => { 
      
@@ -8,6 +9,6 @@ exports.addData = (url) => {
     data.push(newData());  // thêm dữ liệu mới vào dữ liệu cũ
 
     writeData(url, JSON.stringify(data)); // ghi vào file
-    // console.log(newData().id)
+    getData(url);
     console.log('Done!');
 }
