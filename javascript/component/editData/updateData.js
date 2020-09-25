@@ -1,19 +1,8 @@
 const Data = require("../Schema/object_data");
-const {readData} = require("../handle_file/handle_file")
-
-function updateData (id, url) {
-    let data = readData(url);
-    data.forEach((element) => {
-        if(element.id === id){
-            element["name"] = "Tho";
-            element["age"] = "18"
-        }
-    });
-    return data
-}
+const {menu} = require("./menu")
 
 exports.dataUpdated = (dataNeedUpdate, url) => {
-    // console.clear()
+    console.clear()
     const id = dataNeedUpdate.id;
-    return updateData(id, url);
+    return menu(id, url);
 }

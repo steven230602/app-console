@@ -18,10 +18,16 @@ exports.editData = (url) => {
     const data = logData(url);
     let chooseDataToEdit = value("Choose number of data need edit: ");
     let index = parseInt(chooseDataToEdit);
+    
+    if( typeof(index) === Number){
+        const newData = dataUpdated(data[index-1],url)
+        writeData(url, JSON.stringify(newData))
+        console.log("Done!")
+    }else{
+        console.log("Please retype!!")
+        return this.editData(url)
+    }
 
-    const newData = dataUpdated(data[index-1],url)
-
-    writeData(url, JSON.stringify(newData))
-    // console.log("Done!")
+    
 
 }

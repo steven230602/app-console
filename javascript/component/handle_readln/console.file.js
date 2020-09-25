@@ -30,8 +30,8 @@ exports.startApp = () => {
     console.log("***  1.    See Data                                                                         ***"); 
     console.log("***  2.    Create Data                                                                      ***");
     console.log("***  3.    Update Data                                                                      ***");
-    console.log("***  4.    Delete Data                                                                      ***");
-    console.log("***  5.    Search Data                                                                      ***");
+    console.log("***  4.    Search Data                                                                      ***");
+    console.log("***  5.    Delete Data                                                                      ***");
     console.log("***                                                                                         ***");
     console.log("***********************************************************************************************");
     console.log("***********************************************************************************************");
