@@ -1,7 +1,8 @@
 const {value} = require("./readline_file");
-const {getData} = require("../handle.getData/getData")
-const {addData} = require('../addData.handle/adData');
-const {editData} = require('../editData.handle/editData');
+const {getData} = require("../getData/getData")
+const {addData} = require('../addData/addData');
+const {editData} = require('../editData/editData');
+const {searchData} = require("../searchData/searchData")
 
 exports.command = (content) => {
     switch(value(content)) {
@@ -15,7 +16,7 @@ exports.command = (content) => {
             editData('database.json')
             break;
         case '4':
-            console.log('4');
+            searchData('database.json')
             break;
         case '5':
             console.log('5');
