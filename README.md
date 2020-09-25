@@ -5,5 +5,5 @@
    ```git clone https://github.com/steven230602/app-console.git```
 ## 2. RUN APP
 * Sẽ được hướng dẫn chi tiết đối với các app sử dụng ngôn ngữ khác nhau
- *[Javascript](https://github.com/steven230602/app-console/tree/master/javascript)
+ * [Javascript](https://github.com/steven230602/app-console/tree/master/javascript)
   
