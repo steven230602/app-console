@@ -2,7 +2,7 @@ const {value} = require("./readline_file");
 const {getData} = require("../getData/getData");
 const {addData} = require('../addData/addData');
 const {editData} = require('../editData/editData');
-const {searchData} = require("../searchData/searchData");
+const {findData} = require("../searchData/future");
 const {deleteData} = require("../deleteData/deleteData");
 
 exports.command = (content) => {
@@ -17,7 +17,7 @@ exports.command = (content) => {
             editData('database.json');
             break;
         case '4':
-            searchData('database.json');
+            findData('database.json');
             break;
         case '5':
             deleteData('database.json');
