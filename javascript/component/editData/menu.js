@@ -4,6 +4,7 @@ const {editAgeName} = require("./editAgeName")
  
 const {value} = require("../handle_readln/readline_file");
 
+// Menu cho phần edit
 exports.menu = (id, url) => {
     console.log('*****************');
     console.log('* 1. Edit Name  *');
