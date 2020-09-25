@@ -1,6 +1,8 @@
 const {value} = require('../common/readline_file');
 const {readData} = require("../handle_database/handle_database");
 
+// Module tìm kiếm
+
 function result(keyword) { // tìm kiếm từ khóa theo keyword
     let resultList = []; //Mảng kết quả tìm kiếm
 

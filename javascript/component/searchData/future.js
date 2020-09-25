@@ -1,5 +1,6 @@
 const {searchData} = require("./searchData");
 
+// chức năng tìm kiếm
 exports.findData = (url) => {
     let datas = searchData(url);
     console.log("**************************");
