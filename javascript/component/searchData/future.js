@@ -2,6 +2,7 @@ const {searchData} = require("./searchData");
 
 // chức năng tìm kiếm
 exports.findData = (url) => {
+    console.clear()
     let datas = searchData(url);
     console.log("**************************");
     console.log("*    Kết quả tìm kiếm    *");
